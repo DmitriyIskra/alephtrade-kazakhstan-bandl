@@ -12,9 +12,6 @@
     // require '/home/c/cq96411/public_html/PHPMailer-6.8.0/src/Exception.php';
     // require '/home/c/cq96411/public_html/PHPMailer-6.8.0/src/PHPMailer.php';
 
-    // header('Access-Control-Allow-Origin: http://localhost:8800/');
-    // header('Access-Control-Allow-Methods: GET, POST');
-    // header('Content-Type: multipart/form-data');
 try {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
@@ -27,10 +24,6 @@ try {
     $mail->Username = 'iskradmitrii@yandex.ru';
     $mail->Password = 'ihkuaznoznpeyygo';
     $mail->isHTML(true);
-    // ihkuaznoznpeyygo
-    // старый 'oxwlotvyrqwygkei'
-    // $mail->setLanguage('ru', 'phpmailer/language/');
-
   
 
     // Откого письмо
@@ -78,8 +71,7 @@ try {
     }
 
     $responce = ['message' => $message];
-    
-    
+
     echo json_encode($responce);
 } catch (\Throwable $th) {
     //throw $th;
