@@ -689,6 +689,8 @@ button.swiper-pagination-bullet {
 
 
 .nav__item {
+    position: relative;
+
     padding-top: 1.04vw;
     padding-bottom: 1.04vw;
 
@@ -701,7 +703,13 @@ button.swiper-pagination-bullet {
     cursor: pointer;
 }
 
-.nav__item > a {
+.nav__item-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
     color: inherit;
 }
 
@@ -1228,7 +1236,7 @@ button.swiper-pagination-bullet {
 .callback__response {
     display: none;
     font-size: 0.68vw;
-    font-weight: 400;
+    font-weight: 400; 
     text-align: center;
 
     color: #333;
@@ -1264,7 +1272,13 @@ button.swiper-pagination-bullet {
         0.10vw 0.16vw 0.36vw 0px rgba(0, 0, 0, 0.20);
     color: #FFF;
 
+    transition: box-shadow 0.2s linear;
+
     cursor: pointer;
+}
+
+.callback__submit:hover {
+    box-shadow: none;
 }
 
 .callback__wr-submit[invalid] > .callback__submit {
@@ -2299,6 +2313,13 @@ footer {
     font-weight: 400;
 
     color: #C5C5C5;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+    text-decoration-color: #C5C5C5;
+    text-decoration-style: solid;
+    text-underline-position: under;
 }
 
 .footer__wrapper-address {

@@ -9831,7 +9831,7 @@ class RedrawCallback {
 class ApiCallback {
     async create(data) {
         try {
-            const response = await fetch('./sendmail.php', { // ./sendmail.php https://alef-kazah/sendmail.php
+            const response = await fetch('./sendmail.php', { //  https://alef-kazah/sendmail.php
                 method: 'POST',
                 headers: {
                     // 'Content-Type' : 'application/json',
