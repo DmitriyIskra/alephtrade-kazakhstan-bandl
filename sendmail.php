@@ -5,6 +5,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     
+    
     require './PHPMailer-6.8.0/src/Exception.php';
     require './PHPMailer-6.8.0/src/PHPMailer.php';
     require './PHPMailer-6.8.0/src/SMTP.php';
@@ -21,15 +22,15 @@ try {
     $mail->SMTPAuth = true;
     $mail->Port = 465;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Username = 'iskradmitrii@yandex.ru';
-    $mail->Password = 'ihkuaznoznpeyygo';
+    $mail->Username = '';
+    $mail->Password = '';
     $mail->isHTML(true);
   
 
-    // Откого письмо
-    $mail->setFrom('iskradmitrii@yandex.ru', 'Запрос с сайта Алефтред'); // не использовать mail
+    // От кого письмо
+    $mail->setFrom('', 'Запрос с сайта Алефтред'); // не использовать mail
     // Кому отправить
-    $mail->addAddress('iskradmitrii@yandex.ru'); //  dmitriyiskra@mail.ru
+    $mail->addAddress(''); //  dmitriyiskra@mail.ru
     // Тема письма
     $mail->Subject = 'Запрос с сайта Alephtrade'; 
 
